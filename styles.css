@@ -48,6 +48,22 @@ nav {
   justify-content: flex-end;
 }
 
+/* Keyframes for color change */
+@keyframes colorBlink {
+  0%,
+  100% {
+    color: #ffbd33; /* Golden color */
+  }
+  50% {
+    color: #fff; /* White color */
+  }
+}
+
+/* Apply animation to the 2024 USL Cup link */
+.nav-links ul li a.usl-cup-link {
+  animation: colorBlink 4s linear infinite; /* Adjust timing as needed */
+}
+
 .nav-links ul li {
   list-style: none;
   display: inline-block;
@@ -88,7 +104,9 @@ nav {
 
 .hero_Text h1 {
   font-size: 62px;
-  padding-top: 75px;
+}
+.hero_Text {
+  margin-top: 60px;
 }
 
 .hero_Text p {
@@ -733,6 +751,11 @@ ul {
     padding: 10px;
     width: auto;
   }
+  .matches_Text_Week2 {
+    font-size: 40px;
+    padding: 10px;
+    width: auto;
+  }
 }
 
 @media (max-width: 2000) {
@@ -743,6 +766,12 @@ ul {
   }
 
   .matches_Text {
+    font-size: 40px;
+    padding: 10px;
+    width: auto;
+    padding-bottom: 200px;
+  }
+  .matches_Text_Week2 {
     font-size: 40px;
     padding: 10px;
     width: auto;
@@ -905,4 +934,57 @@ ul {
   display: block;
   margin: auto;
   padding-bottom: 20px;
+}
+
+/* USL CUP PAGE */
+
+.qualifier-section {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Ensures no space between the two elements */
+  width: 100%; /* Ensures the section takes full width of the container */
+}
+
+.qualText-content,
+.qualImage-content {
+  flex: 1; /* Each child takes up equal space */
+  padding: 20px; /* Padding around content */
+}
+
+.qualText-content {
+  text-align: left; /* Ensures text is aligned to the left */
+}
+
+.qualImage-content {
+  text-align: right; /* Ensures image is aligned to the right */
+}
+
+.qualImage-content img {
+  width: 100%; /* Ensures images are fully responsive and fill their container */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Enhancements for responsiveness */
+@media (max-width: 768px) {
+  .qualifier-section {
+    flex-direction: column; /* Stacks the items vertically on smaller screens */
+  }
+
+  .qualText-content,
+  .qualImage-content {
+    text-align: center; /* Centers the content on smaller screens */
+    padding: 10px; /* Less padding on smaller screens */
+  }
+
+  .qualImage-content img {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .Qualifiers {
+    font-size: 75px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: center;
+    line-height: 130px;
+  }
 }
