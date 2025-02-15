@@ -21,10 +21,10 @@
         <nav>
             <a href="index.html"
               ><img src="assets/logos/transparent_logo.png"
-            /></a>
+            ></a>
             <h1 style="color: #fff; padding-left: 10px">USL</h1>
             <div class="nav-links" id="navLinks">
-              <i class="fa fa-times" onclick="hideMenu()"></i>
+              <i class="fa fa-times" onclick="hideMenu()"></i> 
               <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="matches.html">MATCHES</a></li>
@@ -35,14 +35,54 @@
             <i class="fa fa-bars" onclick="showMenu()"></i>
           </nav>
 
-          <div><h1 class="Qualifiers">USL CUP 2024</h1></div>
+          <div><h1 class="Qualifiers"></h1></div>
 
           <section class="DonationSect">
 
             <div class="donationH1">
-              <h1 class="Qualifiers"> THE BIGGER IMPACT</h1> 
-              <h1 style="color: #fff;">Here's how much we raised</h1> 
+              <h2 class="Qualifiers_L">  WE HAVE RAISED</h1> 
+              <h1 class="donationAmount"> £1620</h1>
+              <h2 class="Qualifiers_R" >FOR CHARITY </h1>
+                <div class="donationSector">
+                  <p class="donationText">Thanks to your participation, we have raised hundreds of pounds for 5 great charities, that being: <br> <br>
+                  </p>
+                  <div class="week1CardContainer">
+                    <div class="label"><h1 class="Card_Text"></h1></div>
+                   <div class="DegreeHeader"> <h2>Gaza Soup Kitchen</h2></div>  
+                   <div class="time">£320</div> 
+                   <div class="location"> </div>
+                  </div>
+
+                  <div class="week1CardContainer">
+                    <div class="label"><h1 class="Card_Text">MON 14 OCT</h1></div>
+                   <div class="DegreeHeader"> <h2>MATHEMATICS</h2></div>  
+                   <div class="time">12pm</div> 
+                   <div class="location"> </div>
+                  </div>
+
+                  <div class="week1CardContainer">
+                    <div class="label"><h1 class="Card_Text">MON 14 OCT</h1></div>
+                   <div class="DegreeHeader"> <h2>MATHEMATICS</h2></div>  
+                   <div class="time">12pm</div> 
+                   <div class="location"> </div>
+                  </div>
+
+                  <div class="week1CardContainer">
+                    <div class="label"><h1 class="Card_Text">MON 14 OCT</h1></div>
+                   <div class="DegreeHeader"> <h2>MATHEMATICS</h2></div>  
+                   <div class="time">12pm</div> 
+                   <div class="location"> </div>
+                  </div>
+
+                  <div class="week1CardContainer">
+                    <div class="label"><h1 class="Card_Text">MON 14 OCT</h1></div>
+                   <div class="DegreeHeader"> <h2>MATHEMATICS</h2></div>  
+                   <div class="time">12pm</div> 
+                   <div class="location"> </div>
+                  </div>
+              <h1 class="summaryheader">Here's a summary of how it went down..</h1> 
             </div>
+            
           </section>
 
           <section class="qualifier-section">
@@ -188,7 +228,64 @@
               -->
               </div>
 
-              <script>
+              
+
+
+          </section>
+
+
+          
+
+        
+
+          
+
+
+          
+          
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+  <script>
+
+                  var navLinks = document.getElementById("navLinks");
+
+                  adjustMenu(); // Ensure the menu is correctly displayed based on screen size on page load
+                  window.addEventListener('resize', adjustMenu); // Adjust the menu on window resize
+                  function adjustMenu() {
+                    if (window.innerWidth > 700) {
+                      showMenu(); // Show the menu on larger screens
+                    } else {
+                      hideMenu(); // Hide the menu on smaller screens
+                    }
+                  }
+
+                  function showMenu() {
+                    //navLinks.style.right = "0"
+                    navLinks.style.display = "flex"
+                  }
+
+                  function hideMenu() {
+                    //navLinks.style.right = "-200px"
+                    navLinks.style.display = "none"
+                  }
+
+
                 let slideIndex = 1;
                 showSlides(slideIndex);
                 
@@ -216,38 +313,6 @@
                   dots[slideIndex-1].className += " active";
                 }
                 </script>
-
-
-          </section>
-
-
-          
-
-        
-
-          
-
-
-          
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-  </body>
-
 
   <footer class="footer">
     <div class="footer_container">
@@ -296,28 +361,4 @@
     </div>
   </footer>
 
-  <script>
-    // What Ijtihad added
-    var navLinks = document.getElementById("navLinks");
-
-    adjustMenu(); // Ensure the menu is correctly displayed based on screen size on page load
-    window.addEventListener('resize', adjustMenu); // Adjust the menu on window resize
-    function adjustMenu() {
-      if (window.innerWidth > 700) {
-        showMenu(); // Show the menu on larger screens
-      } else {
-        hideMenu(); // Hide the menu on smaller screens
-      }
-    }
-
-    function showMenu() {
-      //navLinks.style.right = "0"
-      navLinks.style.display = "flex"
-    }
-
-    function hideMenu() {
-      //navLinks.style.right = "-200px"
-      navLinks.style.display = "none"
-    }
-    </script>
 </html>

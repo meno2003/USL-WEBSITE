@@ -719,6 +719,12 @@ ul {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+/*Donation Sect */
+.DonationSect {
+  padding-bottom: 30px;
+  display: flex;
+  width: 100%;
+}
 
 /* WEEK 1 */
 
@@ -734,6 +740,66 @@ ul {
 
 .Qualifiers {
   font-size: 75px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+  line-height: 130px;
+}
+.Qualifiers_L {
+  padding-bottom: 20px;
+  font-size: 75px;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  justify-content: center;
+  line-height: 130px;
+  padding-left: 20px;
+  /*
+  transform: translateX(200%);
+  animation-name: slide-in-right;
+  display: inline-block;
+  position: relative;
+  transform: translateX(0);
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  */
+}
+/*
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+  */
+.Qualifiers_R {
+  padding-top: 20px;
+  font-size: 75px;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  justify-content: center;
+  line-height: 130px;
+  padding-right: 20px;
+}
+.donationAmount {
+  font-size: 240px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+  line-height: 130px;
+}
+
+.donationText {
+  padding: 20px;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  line-height: 20px;
+}
+.summaryheader {
+  font-size: 25px;
   color: rgb(255, 255, 255);
   text-align: center;
   justify-content: center;
