@@ -723,9 +723,117 @@ ul {
 .DonationSect {
   padding-bottom: 30px;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   width: 100%;
 }
 
+.DonationSectHeader {
+  width: 100%;
+  color: #fff;
+}
+.ChampionshipHeader h1 {
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  align-items: center;
+  font-size: 40px;
+}
+.DonationSectHeader h1 {
+  font-size: 200px;
+  text-align: center;
+  padding: 0;
+}
+
+.DonationSectHeader h2 {
+  font-size: 64px;
+}
+
+.DonationHeaderLeft {
+  text-align: left;
+  padding: 20px;
+  font-size: 75px;
+}
+.DonationHeaderRight {
+  text-align: right;
+  padding: 20px;
+  font-size: 75px;
+}
+
+/* USL MEDIA QUERIES */
+
+@media (max-width: 900px) {
+  .DonationSectHeader h1 {
+    font-size: 70px;
+    line-height: 60px;
+    text-align: center;
+  }
+  .DonationSectHeader h2 {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .summaryheader {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.donationCardSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.DonoCardContainer {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: flex-start;
+  margin: 50px;
+  position: relative;
+}
+
+.DonoLogo1 {
+  width: 170px;
+  height: 170px;
+  margin: 10px;
+}
+
+.DonoLogo2 {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+}
+
+.DonoLogo3 {
+  width: 200px;
+  height: 100px;
+  margin: 40px;
+}
+
+.DonoLogo4 {
+  width: 150px;
+  height: 170px;
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.DonoLogo5 {
+  width: 220px;
+  height: 100px;
+  margin: 40px;
+}
 /* WEEK 1 */
 
 .matches_Text {
@@ -736,6 +844,16 @@ ul {
 .Card_Text {
   font-size: 20px;
   color: #fff;
+}
+
+.donationH1 {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .Qualifiers {
@@ -805,6 +923,8 @@ ul {
   justify-content: center;
   line-height: 130px;
 }
+
+/* MATCHES PAGE MEDIA QUERIES AND CSS*/
 
 @media (max-width: 900px) {
   .Qualifiers {
@@ -1021,7 +1141,7 @@ ul {
   padding: 20px;
   background-color: white;
   border-radius: 30px;
-  margin-left: 20px;
+  margin: 20px;
   margin-bottom: 10px;
 }
 
