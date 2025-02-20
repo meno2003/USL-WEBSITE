@@ -720,13 +720,6 @@ ul {
   background-repeat: no-repeat;
 }
 /*Donation Sect */
-.DonationSect {
-  padding-bottom: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 100%;
-}
 
 .DonationSectHeader {
   width: 100%;
@@ -740,24 +733,33 @@ ul {
   font-size: 40px;
 }
 .DonationSectHeader h1 {
-  font-size: 200px;
+  font-size: 250px;
   text-align: center;
   padding: 0;
+  line-height: 150px;
 }
 
 .DonationSectHeader h2 {
-  font-size: 64px;
+  font-size: 50px;
 }
 
 .DonationHeaderLeft {
   text-align: left;
   padding: 20px;
-  font-size: 75px;
+  padding-top: 0;
 }
 .DonationHeaderRight {
   text-align: right;
   padding: 20px;
   font-size: 75px;
+}
+
+.summaryheader {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+  line-height: 130px;
 }
 
 /* USL MEDIA QUERIES */
@@ -780,28 +782,117 @@ ul {
   }
 }
 
-.donationCardSection {
+.DonationSect {
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.donationSector {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.proofFile {
+  width: 100%;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 50px;
 }
 
 .DonoCardContainer {
   width: 250px;
   height: 250px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border-radius: 20px;
   align-items: flex-start;
   margin: 50px;
   position: relative;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  background-color: transparent;
+}
+
+/* Flip on click */
+.DonoCardContainer.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Ensures only one side is visible at a time */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid #ddd; /* Add border here instead */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Ensures proper stacking order */
+.flip-card-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+  background-color: white;
+}
+
+.DonoCardContainer:hover {
+  cursor: pointer;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+  background-color: white;
+}
+
+.DonoText {
+  font-size: 20px;
+  text-decoration: solid;
+  text-align: left;
+  justify-content: left;
+}
+
+.CharHeader {
+  padding-top: 40px;
+  text-align: center;
+}
+.CharText {
+  font-size: 13px;
+  text-decoration: solid;
+  text-align: center;
+  justify-content: left;
+}
+
+.DonoCardContainer:nth-child(-n + 2) {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.donationCardSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .DonoLogo1 {
@@ -916,57 +1007,11 @@ ul {
   font-size: 20px;
   line-height: 20px;
 }
-.summaryheader {
-  font-size: 25px;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  justify-content: center;
-  line-height: 130px;
-}
 
 /* MATCHES PAGE MEDIA QUERIES AND CSS*/
 
-@media (max-width: 900px) {
-  .Qualifiers {
-    font-size: 30px;
-    line-height: 60px;
-  }
-
-  .matches_Text {
-    font-size: 40px;
-    padding: 10px;
-    width: auto;
-  }
-  .matches_Text_Week2 {
-    font-size: 40px;
-    padding: 10px;
-    width: auto;
-  }
-}
-
-@media (max-width: 2000) {
-  .Qualifiers {
-    font-size: 60px;
-    line-height: 60px;
-    padding-bottom: 200px;
-  }
-
-  .matches_Text {
-    font-size: 40px;
-    padding: 10px;
-    width: auto;
-    padding-bottom: 200px;
-  }
-  .matches_Text_Week2 {
-    font-size: 40px;
-    padding: 10px;
-    width: auto;
-    padding-bottom: 200px;
-  }
-}
-
 .USLCUP_title {
-  font-size: 130px;
+  font-size: 75px;
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 100px;
@@ -1035,6 +1080,28 @@ ul {
   padding-left: 30px;
   padding-top: 30px;
 }
+
+.USLFinalSection {
+  padding-bottom: 40px;
+}
+
+.USLFinalCardContainer {
+  width: 40%;
+  height: 350px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+  margin: auto;
+  position: relative;
+}
 .label {
   width: 130px;
   height: 40px;
@@ -1087,15 +1154,63 @@ ul {
 .week2HeaderContainer {
   width: 100%;
   height: 80px;
-  padding-left: 900px;
+  align-items: right;
+  text-align: right;
   padding-top: 30px;
   padding-right: 30px;
 }
 .matches_Text_Week2 {
-  justify-content: right;
-  text-align: right;
   font-size: 75px;
   color: #fff;
+  display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .Qualifiers {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .matches_Text_Week2 {
+    font-size: 40px;
+    color: #fff;
+    display: inline-block;
+  }
+  .matches_Text {
+    font-size: 40px;
+    color: #fff;
+    display: inline-block;
+  }
+  .USLCUP_title {
+    text-align: center;
+    font-size: 75px; /* Adjust font size for smaller screens */
+    margin: 0; /* Remove any default margins that might affect centering */
+    padding: 20px 0; /* Add some padding for better spacing */
+  }
+
+  .week1CardContainer,
+  .USLFinalCardContainer {
+    width: 60%; /* Makes the card wider on small screens */
+    margin: 10px auto; /* Centers the card and adds vertical spacing */
+    padding: 10px; /* Adds padding inside the card */
+    box-sizing: border-box; /* Includes padding in width calculation */
+    height: 40%;
+  }
+}
+
+@media (max-width: 2000) {
+  .Qualifiers {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 200px;
+  }
+
+  .matches_Text {
+    font-size: 40px;
+    padding: 10px;
+    width: auto;
+    padding-bottom: 200px;
+  }
 }
 
 .red-bg {
@@ -1171,14 +1286,6 @@ ul {
 
   .qualImage-content img {
     width: 100%; /* Full width on smaller screens */
-  }
-
-  .Qualifiers {
-    font-size: 75px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    justify-content: center;
-    line-height: 130px;
   }
 }
 .mySlides img {
