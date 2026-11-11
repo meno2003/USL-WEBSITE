@@ -5,11 +5,11 @@ app = Flask(__name__)
 
 def connect_db():
     return mysql.connector.connect(
-        host = "localhost",
-        user = "root",
-        password = "Koko-kiyabi10",
-        database = "usl"
-        )
+        host=os.environ.get("DB_HOST", "localhost"),
+        user=os.environ.get("DB_USER"),
+        password=os.environ.get("DB_PASSWORD"),
+        database=os.environ.get("DB_NAME", "usl")
+    )
     
     
 @app.route('/')
@@ -40,4 +40,4 @@ def csSignUp():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=os.environ.get("FLASK_DEBUG") == "1")
